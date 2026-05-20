@@ -26,7 +26,7 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-white">
+    <section id="faq" className="bg-white">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
         <div className="flex flex-col items-center text-center">
           <SectionLabel>FAQ</SectionLabel>
