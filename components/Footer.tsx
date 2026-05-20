@@ -1,7 +1,17 @@
 import Logo from "./Logo";
 
-const PROGRAMS = ["Data Science", "Drone Pilot", "Live Streaming", "Embedded System"];
-const LINKS = ["About Us", "Who We Are", "What We Do", "Training Programs", "FAQ"];
+const PROGRAMS = [
+  { name: "Data Science", href: "#programs" },
+  { name: "Drone Pilot", href: "#programs" },
+  { name: "Live Streaming", href: "#programs" },
+  { name: "Embedded System", href: "#programs" },
+];
+const LINKS = [
+  { name: "Who We Are", href: '#who' },
+  { name: "What We Do", href: '#services' },
+  { name: "Training Programs", href: '#programs' },
+  { name: "FAQ", href: '#faq' }
+];
 const SOCIAL = [
   {
     label: "LinkedIn",
@@ -106,15 +116,15 @@ export default function Footer() {
   );
 }
 
-function Column({ title, items }: { title: string; items: string[] }) {
+function Column({ title, items }: { title: string; items: { name: string; href: string }[] }) {
   return (
     <div>
       <h4 className="text-base font-bold">{title}</h4>
       <ul className="mt-4 space-y-2 text-sm text-white/75">
-        {items.map((i) => (
-          <li key={i}>
-            <a href="#" className="transition hover:text-brand-cyan">
-              {i}
+        {items.map((item) => (
+          <li key={item.href}>
+            <a href={item.href} className="transition hover:text-brand-cyan">
+              {item.name}
             </a>
           </li>
         ))}
