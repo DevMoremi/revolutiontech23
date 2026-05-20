@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #0e0a36;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.decagon {
+  clip-path: polygon(
+    50% 0%,
+    79.4% 9.5%,
+    97.6% 34.5%,
+    97.6% 65.5%,
+    79.4% 90.5%,
+    50% 100%,
+    20.6% 90.5%,
+    2.4% 65.5%,
+    2.4% 34.5%,
+    20.6% 9.5%
+  );
+}
