@@ -1,5 +1,6 @@
 import SectionLabel from "./SectionLabel";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
 const BULLETS = [
   "Oil & Gas & Mining Training",
@@ -13,9 +14,11 @@ export default function WhoWeAre() {
     <section id="who" className="bg-brand-blue-tint">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-14 lg:px-10 lg:py-24">
         <Reveal className="group overflow-hidden rounded-xl shadow-card">
-          <img
+          <Image
             src="/images/who-we-are.jpg"
             alt="Team training session"
+            width={1920}
+            height={1080}
             className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
           />
         </Reveal>

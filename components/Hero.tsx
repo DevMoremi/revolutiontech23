@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 type Slide = {
@@ -73,13 +74,14 @@ export default function Hero() {
           <div
             key={i}
             aria-hidden={i !== index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-out ${
-              i === index ? "opacity-100" : "pointer-events-none opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-700 ease-out ${i === index ? "opacity-100" : "pointer-events-none opacity-0"
+              }`}
           >
-            <img
+            <Image
               src={slide.image}
-              alt=""
+              alt="hero-section-image"
+              width={1920}
+              height={1080}
               className="absolute inset-0 -z-10 h-full w-full object-cover"
             />
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-purple-dark/95 via-brand-purple/70 to-transparent" />
@@ -132,9 +134,8 @@ export default function Hero() {
             key={i}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
-            className={`h-1.5 rounded-full transition-all ${
-              i === index ? "w-8 bg-brand-cyan" : "w-3 bg-white/40 hover:bg-white/60"
-            }`}
+            className={`h-1.5 rounded-full transition-all ${i === index ? "w-8 bg-brand-cyan" : "w-3 bg-white/40 hover:bg-white/60"
+              }`}
           />
         ))}
       </div>

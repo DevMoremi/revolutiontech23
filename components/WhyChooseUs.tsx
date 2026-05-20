@@ -1,5 +1,6 @@
 import SectionLabel from "./SectionLabel";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
 const PILLARS = [
   {
@@ -47,9 +48,11 @@ export default function WhyChooseUs() {
           {PILLARS.map((p, idx) => (
             <Reveal key={p.title} delay={idx * 100} className="flex justify-center">
               <div className="decagon group relative flex aspect-square w-full max-w-[260px] flex-col items-center justify-center bg-brand-purple-deep px-7 py-8 text-center text-white transition duration-300 hover:-translate-y-1.5 hover:bg-brand-purple">
-                <img
+                <Image
                   src={p.icon}
-                  alt=""
+                  alt="icon-image"
+                  width={50}
+                  height={50}
                   className="h-14 w-14 object-contain transition duration-500 group-hover:scale-110 sm:h-16 sm:w-16"
                 />
                 <h3 className="mt-3 text-base font-bold sm:text-lg">

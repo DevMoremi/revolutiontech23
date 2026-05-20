@@ -6,6 +6,7 @@ import SectionLabel from "./SectionLabel";
 import Reveal from "./Reveal";
 import { useToast } from "./Toast";
 import { clientEnrollmentSchema } from "@/lib/validation";
+import Image from "next/image";
 
 const PROGRAMS: { value: string; label: string }[] = [
   { value: "diploma-in-data-science",   label: "Diploma in Data Science" },
@@ -216,9 +217,11 @@ export default function EnrollmentForm() {
           </div>
 
           <div className="relative order-1 min-h-[280px] overflow-hidden lg:order-2 lg:min-h-full">
-            <img
+            <Image
               src="/images/enrollment.jpg"
               alt="Trainees collaborating"
+              width={500}
+              height={500}
               className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
             />
           </div>

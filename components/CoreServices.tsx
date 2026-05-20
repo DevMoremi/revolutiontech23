@@ -1,5 +1,6 @@
 import SectionLabel from "./SectionLabel";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
 const SERVICES = [
   {
@@ -42,9 +43,11 @@ export default function CoreServices() {
             <Reveal key={s.title} delay={idx * 120} as="article">
               <div className="group flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-card ring-1 ring-black/5 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl">
                 <div className="aspect-[16/10] w-full overflow-hidden">
-                  <img
+                  <Image
                     src={s.img}
                     alt={s.title}
+                    width={1920}
+                    height={1080}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                   />
                 </div>
