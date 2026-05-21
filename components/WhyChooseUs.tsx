@@ -1,31 +1,31 @@
+import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 import Reveal from "./Reveal";
-import Image from "next/image";
 
 const PILLARS = [
   {
-    title: "Industry Expertise",
+    title: "Field-Grade Expertise",
     body:
-      "Learn from professionals with real-world experience across engineering, oil & gas, mining, and technology sectors.",
+      "Engineers, technologists, and field operators with hands-on experience across Oil & Gas, Mining, and Technology.",
     icon: "/images/icon-expertise.png",
   },
   {
-    title: "Practical Training",
+    title: "Multidisciplinary Capability",
     body:
-      "Our programs focus on real applications, ensuring participants gain skills they can immediately apply in their careers.",
-    icon: "/images/icon-training.png",
+      "One firm covering industrial services, technology, multimedia, consultancy, and training.",
+    icon: "/images/icon-consulting.png",
   },
   {
-    title: "Technology Innovation",
+    title: "Applied Technology",
     body:
-      "We incorporate emerging technologies such as AI, data science, and software development into our training programs.",
+      "AI, drones, embedded systems, and data science deployed on real industrial problems, not just in classrooms.",
     icon: "/images/icon-innovation.png",
   },
   {
-    title: "Consulting Support",
+    title: "Industry-Built Training",
     body:
-      "We provide consulting and advisory services that help organizations solve technical challenges and improve performance.",
-    icon: "/images/icon-consulting.png",
+      "Programs designed and delivered by professionals actively working in their fields.",
+    icon: "/images/icon-training.png",
   },
 ];
 
@@ -36,11 +36,11 @@ export default function WhyChooseUs() {
         <Reveal className="flex flex-col items-center text-center">
           <SectionLabel>Why Choose Us</SectionLabel>
           <h2 className="mt-4 text-3xl font-extrabold text-brand-purple-deep sm:text-4xl">
-            We Turn Knowledge Into Real Industry Skills
+            Built for Industry, Tested in the Field
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-black/65 sm:text-base">
-            Our programs combine industry expertise, hands-on training, and
-            modern technology to prepare professionals for real-world challenges.
+            Real-world expertise, applied technology, and multidisciplinary
+            capability across every sector we operate in.
           </p>
         </Reveal>
 
@@ -51,8 +51,8 @@ export default function WhyChooseUs() {
                 <Image
                   src={p.icon}
                   alt="icon-image"
-                  width={50}
-                  height={50}
+                  width={64}
+                  height={64}
                   className="h-14 w-14 object-contain transition duration-500 group-hover:scale-110 sm:h-16 sm:w-16"
                 />
                 <h3 className="mt-3 text-base font-bold sm:text-lg">

@@ -7,7 +7,7 @@ import TrainingPrograms from "@/components/TrainingPrograms";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Faq from "@/components/Faq";
 import EnrollmentForm from "@/components/EnrollmentForm";
-import CtaBanner from "@/components/CtaBanner";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Page() {
@@ -20,9 +20,9 @@ export default function Page() {
       <CoreServices />
       <TrainingPrograms />
       <WhyChooseUs />
-      <Faq />
       <EnrollmentForm />
-      <CtaBanner />
+      <Faq />
+      <Contact />
       <Footer />
     </main>
   );

@@ -1,10 +1,10 @@
 import Reveal from "./Reveal";
 
 const STATS = [
-  { value: "300+", label: "Students" },
-  { value: "10+", label: "Trainers" },
-  { value: "5+", label: "Programs" },
-  { value: "3+", label: "Sectors" },
+  { value: "6+", label: "Business Sectors" },
+  { value: "12+", label: "Disciplines" },
+  { value: "300+", label: "Trained Professionals" },
+  { value: "10+", label: "Industry Experts" },
 ];
 
 export default function Stats() {

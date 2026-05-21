@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 
 type Slide = {
   title: React.ReactNode;
@@ -13,33 +13,31 @@ const SLIDES: Slide[] = [
   {
     title: (
       <>
-        Build a Career in <br />
-        the Oil &amp; Gas <br />
-        Industry
+        An Industry Firm in <br />
+        Oil, Gas &amp; Mining
       </>
     ),
-    body: "Gain practical knowledge in oil exploration, extraction processes, and mineral resource management through industry-focused training.",
+    body: "RevolutionTech23 delivers exploration support, resource management, and engineering consultancy across the energy and extractive sectors.",
     image: "/images/hero-1.jpg",
   },
   {
     title: (
       <>
-        Master Technology &amp; <br />
-        Digital Media Skills
+        Technology, Innovation <br />
+        &amp; Multimedia
       </>
     ),
-    body: "Develop skills in software technology, digital media production, videography, and modern IT solutions.",
+    body: "From software and AI to drone operations, embedded systems, and documentary production. Engineered for real industry use.",
     image: "/images/hero-2.jpg",
   },
   {
     title: (
       <>
-        Professional <br />
-        Engineering Training <br />
-        for the Real World
+        Practical Training <br />
+        Built by Industry
       </>
     ),
-    body: "Learn from experienced professionals and gain practical engineering knowledge across multiple technical disciplines.",
+    body: "Hands-on programs in Data Science, Drone Piloting, Live Streaming, and Embedded Systems, taught by working professionals.",
     image: "/images/hero-3.jpg",
   },
 ];
@@ -74,15 +72,17 @@ export default function Hero() {
           <div
             key={i}
             aria-hidden={i !== index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-out ${i === index ? "opacity-100" : "pointer-events-none opacity-0"
-              }`}
+            className={`absolute inset-0 transition-opacity duration-700 ease-out ${
+              i === index ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
           >
             <Image
               src={slide.image}
-              alt="hero-section-image"
-              width={1920}
-              height={1080}
-              className="absolute inset-0 -z-10 h-full w-full object-cover"
+              alt=""
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className="-z-10 object-cover"
             />
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-purple-dark/95 via-brand-purple/70 to-transparent" />
 
@@ -98,10 +98,10 @@ export default function Hero() {
                   {slide.body}
                 </p>
                 <a
-                  href="#enroll"
+                  href="#contact"
                   className="mt-8 inline-flex items-center justify-center rounded-md bg-brand-cyan px-7 py-3.5 text-base font-semibold text-brand-purple-deep shadow-lg transition hover:brightness-110"
                 >
-                  Apply Now
+                  Get in Touch
                 </a>
               </div>
             </div>
@@ -134,8 +134,9 @@ export default function Hero() {
             key={i}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setIndex(i)}
-            className={`h-1.5 rounded-full transition-all ${i === index ? "w-8 bg-brand-cyan" : "w-3 bg-white/40 hover:bg-white/60"
-              }`}
+            className={`h-1.5 rounded-full transition-[width,background-color] duration-300 ease-out ${
+              i === index ? "w-8 bg-brand-cyan" : "w-3 bg-white/40 hover:bg-white/60"
+            }`}
           />
         ))}
       </div>

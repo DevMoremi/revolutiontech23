@@ -26,17 +26,17 @@ export default function Header() {
               className="group relative text-sm font-medium text-white/90 transition hover:text-brand-cyan"
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-brand-cyan transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-brand-cyan transition-[width] duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
           <a
-            href="#enroll"
+            href="#contact"
             className="hidden rounded-md bg-brand-cyan px-5 py-2.5 text-sm font-semibold text-brand-purple-deep transition hover:scale-[1.04] hover:brightness-110 active:scale-95 lg:inline-flex"
           >
-            Apply Now
+            Get in Touch
           </a>
 
           <button
@@ -76,11 +76,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#enroll"
+              href="#contact"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-brand-cyan px-4 py-2.5 text-center text-sm font-semibold text-brand-purple-deep"
             >
-              Apply Now
+              Get in Touch
             </a>
           </nav>
         </div>

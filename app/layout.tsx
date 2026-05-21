@@ -16,9 +16,9 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "RevolutionTech23 — Build a Career in the Oil & Gas Industry",
+  title: "RevolutionTech23 | Oil & Gas, Mining, Engineering, and Technology",
   description:
-    "Industry-focused training and engineering consultancy turning knowledge into practical skills. We combine expert instruction with hands-on practice for real-world results.",
+    "Multidisciplinary firm delivering Oil & Gas, Mining, Engineering Consultancy, Technology, Multimedia, and professional Training services.",
 };
 
 export default function RootLayout({

@@ -5,20 +5,24 @@ import SectionLabel from "./SectionLabel";
 
 const ITEMS = [
   {
-    q: "What training programs does RevolutionTech23 offer?",
-    a: "Diploma in Data Science, Certified Drone Pilot, Live Streaming Training & Embedded System Training.",
+    q: "What does RevolutionTech23 do?",
+    a: "RevolutionTech23 is a multidisciplinary firm operating across Oil & Gas, Mining, Engineering Consultancy, Technology, Multimedia, and Training.",
   },
   {
-    q: "Who can enroll in these training programs?",
-    a: "Anyone interested in gaining practical and professional skills can enroll.",
+    q: "What sectors do you work in?",
+    a: "Oil and gas, mining, engineering consultancy, software and emerging technology, multimedia production, and professional training.",
   },
   {
-    q: "Do participants receive certification?",
-    a: "Yes, participants receive certification upon successful completion of the training.",
+    q: "What training programs do you offer?",
+    a: "Diploma in Data Science, Certified Drone Pilot, Live Streaming Training, and Embedded Systems Training. Each program is hands-on and instructor-led.",
   },
   {
-    q: "How can I enroll?",
-    a: "Fill out the enrollment form on the page and our team will contact you with the next steps.",
+    q: "Do training participants receive certification?",
+    a: "Yes, participants receive certification on successful completion of any of our training programs.",
+  },
+  {
+    q: "How can I work with RevolutionTech23?",
+    a: "For training, complete the enrollment form on this page. For consultancy, partnerships, or project inquiries, reach us through the Contact section.",
   },
 ];
 
@@ -34,8 +38,8 @@ export default function Faq() {
             Frequently Asked Questions
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-black/65 sm:text-base">
-            Find answers to common questions about our training programs and
-            consulting services.
+            Find answers to common questions about our services, sectors, and
+            training programs.
           </p>
         </div>
 
@@ -73,7 +77,7 @@ export default function Faq() {
                     </svg>
                   </button>
                   <div
-                    className={`grid transition-all duration-300 ease-out ${
+                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
                       isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                     }`}
                   >

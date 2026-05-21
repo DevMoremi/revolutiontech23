@@ -95,7 +95,7 @@ export default function EnrollmentForm() {
       };
 
       if (res.ok && j.ok) {
-        toast.success("Application received — we'll contact you soon.");
+        toast.success("Application received. We will contact you soon.");
         form.reset();
         turnstileRef.current?.reset();
       } else if (j.errors) {
@@ -220,9 +220,9 @@ export default function EnrollmentForm() {
             <Image
               src="/images/enrollment.jpg"
               alt="Trainees collaborating"
-              width={500}
-              height={500}
-              className="absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-105"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover transition duration-700 hover:scale-105"
             />
           </div>
         </div>

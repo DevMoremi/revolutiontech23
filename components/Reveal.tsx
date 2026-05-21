@@ -43,10 +43,8 @@ export default function Reveal({
     <Tag
       ref={ref}
       style={{ transitionDelay: shown ? `${delay}ms` : "0ms" }}
-      className={`transform-gpu transition-all duration-700 ease-out ${
-        shown
-          ? "translate-y-0 opacity-100"
-          : "translate-y-6 opacity-0"
+      className={`transition-opacity duration-700 ease-out ${
+        shown ? "opacity-100" : "opacity-0"
       } ${className}`}
     >
       {children}

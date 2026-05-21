@@ -1,16 +1,20 @@
 import Logo from "./Logo";
 
-const PROGRAMS = [
-  { name: "Data Science", href: "#programs" },
-  { name: "Drone Pilot", href: "#programs" },
-  { name: "Live Streaming", href: "#programs" },
-  { name: "Embedded System", href: "#programs" },
+type FooterLink = { label: string; href: string };
+
+const SERVICES: FooterLink[] = [
+  { label: "Oil & Gas", href: "#services" },
+  { label: "Mining", href: "#services" },
+  { label: "Engineering Consultancy", href: "#services" },
+  { label: "Technology", href: "#services" },
+  { label: "Multimedia", href: "#services" },
+  { label: "Training", href: "#programs" },
 ];
-const LINKS = [
-  { name: "Who We Are", href: '#who' },
-  { name: "What We Do", href: '#services' },
-  { name: "Training Programs", href: '#programs' },
-  { name: "FAQ", href: '#faq' }
+const LINKS: FooterLink[] = [
+  { label: "Who We Are", href: "#who" },
+  { label: "What We Do", href: "#services" },
+  { label: "Training Programs", href: "#programs" },
+  { label: "FAQ", href: "#faq" },
 ];
 const SOCIAL = [
   {
@@ -80,12 +84,12 @@ export default function Footer() {
                 >
                   <path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 013 6a2 2 0 012-2z" />
                 </svg>
-                <span>0707 568 7434, 0916 411 0714, 0810 624 4772</span>
+                <span>0707 568 7434, 0916 411 0714</span>
               </li>
             </ul>
           </div>
 
-          <Column title="Training Programs" items={PROGRAMS} />
+          <Column title="Services" items={SERVICES} />
           <Column title="Quick Links" items={LINKS} />
 
           <div>
@@ -116,15 +120,21 @@ export default function Footer() {
   );
 }
 
-function Column({ title, items }: { title: string; items: { name: string; href: string }[] }) {
+function Column({
+  title,
+  items,
+}: Readonly<{ title: string; items: FooterLink[] }>) {
   return (
     <div>
       <h4 className="text-base font-bold">{title}</h4>
       <ul className="mt-4 space-y-2 text-sm text-white/75">
-        {items.map((item) => (
-          <li key={item.href}>
-            <a href={item.href} className="transition hover:text-brand-cyan">
-              {item.name}
+        {items.map((i) => (
+          <li key={i.label}>
+            <a
+              href={i.href}
+              className="transition hover:text-brand-cyan"
+            >
+              {i.label}
             </a>
           </li>
         ))}

@@ -1,12 +1,34 @@
+import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 import Reveal from "./Reveal";
-import Image from "next/image";
 
-const BULLETS = [
-  "Oil & Gas & Mining Training",
-  "Engineering Consulting & Professional Development",
-  "Software Development & IT Solutions",
-  "Multimedia & Digital Content Production",
+type Pillar = { title: string; body: string };
+
+const BULLETS: Pillar[] = [
+  {
+    title: "Oil & Gas & Mining",
+    body: "Providing industry-focused services in exploration support, extraction operations, resource management, and engineering consultancy.",
+  },
+  {
+    title: "Technology & Innovation",
+    body: "Delivering technology-driven solutions including software development, artificial intelligence, robotics, drone technology, and embedded systems.",
+  },
+  {
+    title: "Engineering Consultancy",
+    body: "Offering expert technical advisory, industrial consultancy, HES services, project support, and professional guidance across engineering disciplines.",
+  },
+  {
+    title: "Training & Education",
+    body: "Equipping individuals and organizations with practical skills through industry-relevant training, workshops, and professional development programs.",
+  },
+  {
+    title: "Multimedia & Production",
+    body: "Creating impactful multimedia content through videography, documentary production, photography, and digital media solutions.",
+  },
+  {
+    title: "Research & Development",
+    body: "Driving innovation through research, emerging technologies, and advanced problem-solving solutions for modern industries.",
+  },
 ];
 
 export default function WhoWeAre() {
@@ -16,48 +38,46 @@ export default function WhoWeAre() {
         <Reveal className="group overflow-hidden rounded-xl shadow-card">
           <Image
             src="/images/who-we-are.jpg"
-            alt="Team training session"
-            width={1920}
-            height={1080}
+            alt="RevolutionTech23 team at work"
+            width={1200}
+            height={900}
+            sizes="(min-width: 1024px) 50vw, 100vw"
             className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
           />
         </Reveal>
 
         <Reveal delay={120}>
-          <SectionLabel>Who we are</SectionLabel>
-          <h2 className="mt-4 text-3xl font-extrabold leading-tight text-brand-purple-deep sm:text-4xl">
-            Empowering Industries Through Engineering, Technology, and
-            Innovation
-          </h2>
+          <div className="flex flex-col items-center text-center">
+            <SectionLabel>Who we are</SectionLabel>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-brand-purple-deep sm:text-4xl">
+              A Multidisciplinary Industry Firm
+            </h2>
+          </div>
           <p className="mt-4 text-sm leading-relaxed text-black/70 sm:text-base">
-            Revolution Tech delivers industry-focused training and engineering
-            consultancy that turns knowledge into practical skills. We combine
-            expert instruction with hands-on practice for real-world results.
-          </p>
-          <p className="mt-4 text-sm leading-relaxed text-black/70 sm:text-base">
-            Our work covers oil &amp; gas, engineering consulting, IT solutions
-            and multimedia production, all designed to help professionals and
-            businesses grow and innovate.
+            RevolutionTech23 is a multidisciplinary company delivering solutions across Oil &amp; Gas, Mining Engineering, Technology, Consultancy, Multimedia, Research &amp; Development and Professional Training.
           </p>
 
-          <ul className="mt-6 space-y-3">
+          <ul className="mt-6 space-y-5">
             {BULLETS.map((b) => (
-              <li key={b} className="flex items-start gap-3 text-sm sm:text-base">
-                <span className="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-sm bg-brand-cyan text-brand-purple-deep">
+              <li key={b.title} className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-5 w-5 flex-none items-center justify-center rounded-sm bg-brand-cyan text-brand-purple-deep">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="h-3.5 w-3.5">
                     <path d="M5 12l5 5L20 7" />
                   </svg>
                 </span>
-                <span className="text-black/80">{b}</span>
+                <div>
+                  <h3 className="text-sm font-semibold text-brand-purple-deep sm:text-base">{b.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-black/65">{b.body}</p>
+                </div>
               </li>
             ))}
           </ul>
 
           <a
-            href="#programs"
+            href="#contact"
             className="mt-8 inline-flex items-center justify-center rounded-md bg-brand-cyan px-6 py-3 text-sm font-semibold text-brand-purple-deep transition hover:scale-[1.03] hover:brightness-110 active:scale-95"
           >
-            Explore Programs
+            Get in Touch
           </a>
         </Reveal>
       </div>
