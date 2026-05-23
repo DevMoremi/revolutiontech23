@@ -16,6 +16,9 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.png",
+  },
   title: "RevolutionTech23 | Oil & Gas, Mining, Engineering, and Technology",
   description:
     "Multidisciplinary firm delivering Oil & Gas, Mining, Engineering Consultancy, Technology, Multimedia, and professional Training services.",

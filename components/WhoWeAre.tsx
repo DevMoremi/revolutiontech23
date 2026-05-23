@@ -7,7 +7,7 @@ type Pillar = { title: string; body: string };
 const BULLETS: Pillar[] = [
   {
     title: "Oil & Gas & Mining",
-    body: "Providing industry-focused services in exploration support, extraction operations, resource management, and engineering consultancy.",
+    body: "RevolutionTech23 is actively involved in the oil and gas industry, including exploration, extraction, and related services, as well as the mining sector, focusing on exploration, extraction, and mineral resource management.",
   },
   {
     title: "Technology & Innovation",
